@@ -1689,6 +1689,131 @@ inset -5px -5px 10px rgba(255,255,255,0.8) !important;
 
 }
 
+  /* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 900px){
+
+/* hero section stack */
+
+.hero{
+grid-template-columns:1fr;
+gap:40px;
+padding:80px 6%;
+text-align:center;
+}
+
+/* heading size */
+
+.hero h1{
+font-size:36px;
+}
+
+/* features */
+
+.hero-features{
+grid-template-columns:1fr;
+}
+
+/* stats */
+
+.hero-stats{
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+}
+
+/* buttons */
+
+.hero-buttons{
+justify-content:center;
+flex-wrap:wrap;
+}
+
+/* student images */
+
+.students-grid{
+grid-template-columns:repeat(2,140px);
+gap:20px;
+}
+
+.student-card{
+width:140px;
+height:180px;
+}
+
+/* about section */
+
+.about-grid{
+grid-template-columns:1fr;
+gap:40px;
+}
+
+/* timeline */
+
+.timeline{
+flex-direction:column;
+align-items:center;
+gap:30px;
+}
+
+.timeline-line{
+display:none;
+}
+
+/* process timeline */
+
+.timeline-process{
+padding-left:40px;
+}
+
+/* contact */
+
+.contact-grid{
+grid-template-columns:1fr;
+}
+
+/* navbar */
+
+nav{
+flex-direction:column;
+gap:10px;
+}
+
+.nav-links{
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+}
+
+}
+
+/* small phones */
+
+@media (max-width:500px){
+
+.hero h1{
+font-size:30px;
+}
+
+h2{
+font-size:30px;
+}
+
+.students-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.student-card{
+width:130px;
+height:170px;
+}
+
+.hero-stats{
+flex-direction:column;
+}
+
+}
+  
 </style>
 
 
@@ -2322,4 +2447,5 @@ observer.observe(step);
 <!-- ===================== BODY END ===================== -->
 
 </html>
+
 
