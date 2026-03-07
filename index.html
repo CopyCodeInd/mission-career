@@ -1457,8 +1457,241 @@ color:#334155;
 
 }
 
+/* ================= SERVICES SECTION ================= */
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:30px;
+}
+
+.service-card{
+background:white;
+padding:30px;
+border-radius:16px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+text-align:center;
+transition:all 0.3s ease;
+}
+
+.service-card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+.service-icon{
+font-size:36px;
+margin-bottom:12px;
+}
+
+.service-card h3{
+color:#2563eb;
+margin-bottom:10px;
+}
+
+.service-card p{
+font-size:14px;
+line-height:1.6;
+}
+
+/* SERVICES HOVER ANIMATION */
+
+.service-card{
+
+transition:all 0.35s ease;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+/* hover lift */
+
+.service-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
+
+}
+
+/* icon animation */
+
+.service-icon{
+
+display:inline-block;
+
+transition:transform 0.3s ease;
+
+}
+
+/* icon bounce */
+
+.service-card:hover .service-icon{
+
+transform:scale(1.2) rotate(6deg);
+
+}
+
+/* glow border */
+
+.service-card::before{
+
+content:"";
+
+position:absolute;
+
+inset:-2px;
+
+border-radius:16px;
+
+background:linear-gradient(
+45deg,
+#2563eb,
+#60a5fa,
+#2563eb
+);
+
+opacity:0;
+
+transition:0.3s;
+
+z-index:-1;
+
+}
+
+.service-card:hover::before{
+
+opacity:1;
+
+filter:blur(10px);
+
+}
+
+/* ABOUT SECTION DARK MODE FIX */
+
+body.dark .about-card{
+background:#1e293b;
+color:white;
+}
+
+body.dark .why-card{
+background:#1e293b;
+color:white;
+}
+
+body.dark .timeline-item{
+background:#1e293b;
+color:white;
+}
+
+body.dark .about-stat{
+background:#1e293b;
+color:white;
+}
+
+/* text color fix */
+
+body.dark .about-text h3{
+color:#60a5fa;
+}
+
+body.dark .about-text p{
+color:#cbd5e1;
+}
+
+/* DESTINATION SECTION DARK MODE FIX */
+
+body.dark .dest-card{
+background:#1e293b;
+}
+
+body.dark .dest-card span{
+color:white;
+}
+
+body.dark .dest-card:hover{
+background:#334155;
+}
+
+/* ================= CLAY UI UPGRADE ================= */
+
+/* main clay cards */
+
+.feature,
+.dest-card,
+.service-card,
+.about-card,
+.process-content,
+.timeline-item,
+.contact-form,
+.why-card{
+
+background:#e9eff7 !important;
+
+border-radius:22px !important;
+
+/* soft clay shadow */
+
+box-shadow:
+8px 8px 18px rgba(163,177,198,0.6),
+-8px -8px 18px rgba(255,255,255,0.9) !important;
+
+transition:all 0.35s ease;
+
+}
+
+/* hover press effect */
+
+.feature:hover,
+.dest-card:hover,
+.service-card:hover,
+.about-card:hover,
+.process-content:hover,
+.timeline-item:hover,
+.why-card:hover{
+
+transform:translateY(-4px);
+
+box-shadow:
+inset 6px 6px 12px rgba(163,177,198,0.5),
+inset -6px -6px 12px rgba(255,255,255,0.8) !important;
+
+}
+
+/* clay buttons */
+
+.btn,
+.btn-outline,
+.nav-btn{
+
+background:#e9eff7 !important;
+color:#2563eb !important;
+
+box-shadow:
+6px 6px 14px rgba(163,177,198,0.6),
+-6px -6px 14px rgba(255,255,255,0.9) !important;
+
+border:none !important;
+
+}
+
+/* button press */
+
+.btn:hover,
+.btn-outline:hover,
+.nav-btn:hover{
+
+box-shadow:
+inset 5px 5px 10px rgba(163,177,198,0.5),
+inset -5px -5px 10px rgba(255,255,255,0.8) !important;
+
+}
 
 </style>
+
+
 <!-- ===================== CSS END ===================== -->
 
 </head>
@@ -1564,25 +1797,23 @@ Mission Career Education empowers ambitious students to pursue international edu
 <div class="students-grid">
 
 <div class="student-card">
-<img src="pooja.png" alt="Pooja Welling">
+<img class="pooja-img" src="pooja.png">
 <div class="student-name">Pooja Welling</div>
 </div>
-
 <div class="student-card">
-<img src="gautam.png" alt="Gautam Umashankar">
+<img class="gautam-img" src="gautam.png">
 <div class="student-name">Gautam Umashankar</div>
 </div>
 
 <div class="student-card">
-<img src="reema.png" alt="Reema Welling">
+<img src="reema.png">
 <div class="student-name">Reema Welling</div>
 </div>
 
 <div class="student-card">
-<img src="julee.png" alt="Julee Shakya">
+<img class="julee-img" src="julee.png">
 <div class="student-name">Julee Shakya</div>
 </div>
-
 </div>
 
 </div>
@@ -1727,6 +1958,16 @@ To become one of India's most trusted international education consultancies.
 
 </div>
 
+<div class="process-step">
+
+<div class="process-dot"></div>
+
+<div class="process-content">
+<h3>💰 Education Loan</h3>
+<p>Guidance for securing education loans from trusted financial partners with complete documentation support.</p>
+</div>
+
+</div>
 
 <div class="process-step">
 
@@ -1869,6 +2110,69 @@ To become one of India's most trusted international education consultancies.
 </div>
 </section>
 
+<section id="services">
+
+<h2>Our Services</h2>
+
+<div class="services-grid">
+
+<div class="service-card">
+<div class="service-icon">🎓</div>
+<h3>Career Counseling</h3>
+<p>Personalized counseling to help students choose the right country, course and university.</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">🏫</div>
+<h3>University Selection</h3>
+<p>Shortlisting top universities based on academic profile and career goals.</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">📑</div>
+<h3>Application Assistance</h3>
+<p>Complete support for application forms, SOP writing and documentation.</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">💰</div>
+<h3>Education Loan Assistance</h3>
+<p>Guidance for securing education loans through trusted financial partners.</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">🛂</div>
+<h3>Visa Guidance</h3>
+<p>Step-by-step visa documentation and interview preparation.</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">🏠</div>
+<h3>Accommodation Assistance</h3>
+<p>Support for finding safe and affordable student accommodation abroad.</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">📈</div>
+<h3>Profile Building</h3>
+<p>Guidance on internships, projects and achievements to strengthen profiles.</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">📚</div>
+<h3>Test Preparation</h3>
+<p>IELTS • TOEFL • GRE • GMAT • PTE preparation guidance.</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">✈️</div>
+<h3>Pre-Departure Support</h3>
+<p>Travel preparation, forex guidance and accommodation assistance.</p>
+</div>
+
+</div>
+
+</section>
 
 
 <!-- ===================== CONTACT ===================== -->
@@ -1884,23 +2188,28 @@ To become one of India's most trusted international education consultancies.
 <h3>Office Address</h3>
 
 <p>
-Neptune CHS Shop 6  
-Thakur Village Road  
-Kandivali East  
-Mumbai 400101
+28 Bldg No-27, Thakur Village Rd, 
+Evershine Millennium Paradise, 
+Evershine Nagar, Kandivali East, 
+Mumbai, Maharashtra 400101
 </p>
 
 <p>Email: mcinteractions@gmail.com</p>
-<p>Phone: +91 9870003748</p>
+<p>Phone: +91 9870003748
++91 98702 13648
++91 97029 89937</p>
 
 </div>
 
 <div class="contact-form">
-
 <form action="https://formsubmit.co/mcinteractions@gmail.com" method="POST">
 
 <input type="text" name="name" placeholder="Your Name" required>
+
 <input type="email" name="email" placeholder="Email" required>
+
+<input type="tel" name="phone" placeholder="Phone Number" required>
+
 <textarea name="message" rows="4" placeholder="Message"></textarea>
 
 <button class="btn">Submit</button>
@@ -2004,11 +2313,12 @@ observer.observe(step);
 
 });
 
+
+
 </script>
 
 
 </body>
 <!-- ===================== BODY END ===================== -->
-
 
 </html>
