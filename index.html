@@ -2754,6 +2754,16 @@ navLinks.classList.toggle("active");
 });
 
 });
+
+  // MOBILE MENU AUTO CLOSE
+
+const navItems = document.querySelectorAll(".nav-links a");
+
+navItems.forEach(item => {
+item.addEventListener("click", () => {
+document.querySelector(".nav-links").classList.remove("active");
+});
+});
 </script>
   
 
@@ -2762,6 +2772,7 @@ navLinks.classList.toggle("active");
 <!-- ===================== BODY END ===================== -->
 
 </html>
+
 
 
 
